@@ -1,0 +1,58 @@
+@font-face {
+    font-family: myPoppins;
+    src: url("/age-calculator-app-main/assets/fonts/Poppins-Regular.ttf");
+  }
+
+@font-face {
+    font-family: myPoppins;
+    src: url("/age-calculator-app-main/assets/fonts/Poppins-Bold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: myPoppins;
+    src: url("/age-calculator-app-main/assets/fonts/Poppins-BoldItalic.ttf");
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: myPoppins;
+    src: url("/age-calculator-app-main/assets/fonts/Poppins-ExtraBold.ttf");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: myPoppins;
+    src: url("/age-calculator-app-main/assets/fonts/Poppins-ExtraBoldItalic.ttf");
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: myPoppins;
+    src: url("/age-calculator-app-main/assets/fonts/Poppins-Italic.ttf");
+    font-style: italic;
+}
+
+
+body {
+    background: hsl(0, 0%, 86%);
+}
+
+footer {
+    text-align: center;
+    font-size: 24px;
+    color: hsl(0, 0%, 8%);
+
+}
+
+footer a {
+    color: hsl(259, 100%, 65%);
+    text-decoration:overline
+}
+
+footer a:hover {
+    opacity: .5;
+    text-decoration: line-through;
+}
