@@ -9,3 +9,42 @@ let yearError = document.getElementById("year-error")
 let yearText = document.getElementsByClassName("year-text")
 let monthText = document.getElementsByClassName("month-text")
 let dayText = document.getElementsByClassName("day-text")
+
+// generic test function
+function testMe(e) {
+    e.preventDefault() //prevent page reloading
+    console.log("hello")
+    console.log(dayInput.value)
+    console.log(monthInput.value)
+    console.log(yearInput.value)
+}
+
+function stopDefault(e) {
+    e.preventDefault()
+    return
+}
+
+// functions for logic
+let allInputs = [dayInput, monthInput, yearInput]
+let allErrors = [dayError, monthError, yearError]
+
+function notBlank(e) {
+    stopDefault(e)
+    for (let i = 0; i < allInputs.length; i++) {
+        if (allInputs[i].value == "") {
+            console.log("blank")
+            allErrors[i].innerText = `Please fill out this field.`
+        }
+    }
+}
+
+//functions for display
+
+function blankTextError() {
+
+}
+
+
+// add event listener to button
+// button.addEventListener('click', testMe)
+button.addEventListener('click', notBlank)
