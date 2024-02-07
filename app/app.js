@@ -12,7 +12,6 @@ let dayText = document.getElementsByClassName("day-text")
 
 // generic test function
 function testMe(e) {
-    e.preventDefault() //prevent page reloading
     console.log("hello")
     console.log(dayInput.value)
     console.log(monthInput.value)
@@ -20,7 +19,7 @@ function testMe(e) {
 }
 
 function stopDefault(e) {
-    e.preventDefault()
+    e.preventDefault() //prevent page reloading
     return
 }
 
@@ -29,13 +28,21 @@ let allInputs = [dayInput, monthInput, yearInput]
 let allErrors = [dayError, monthError, yearError]
 
 function notBlank(e) {
-    stopDefault(e)
     for (let i = 0; i < allInputs.length; i++) {
         if (allInputs[i].value == "") {
             console.log("blank")
             allErrors[i].innerText = `Please fill out this field.`
         }
     }
+}
+
+
+
+// grand function to hold all logic
+function onSubmission(e) {
+    stopDefault(e)
+    testMe()
+    notBlank()
 }
 
 //functions for display
